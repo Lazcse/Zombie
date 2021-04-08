@@ -6,7 +6,8 @@ namespace Zombie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var app = new Application();
+            app.Run();
         }
     }
 }
