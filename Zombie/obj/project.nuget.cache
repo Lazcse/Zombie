@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "38lS/7uir736OU7JfQfJv3MGydtXt59QPqFdvO8RHt/z/DNsuIJwD098pSEhQpr6PwW3Xuz0Jnu9a0EU0Jm1qg==",
+  "dgSpecHash": "HlAUmmi4lBjtKUc++K/MGJdnh08QvoMk5duAHWxWlH2Mv8ViKSqmfIVu3YuKhACHDCKc0UufmPhgwStsYfMWKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lasse\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\sfmlui\\1.0.0-pre.1\\sfmlui.1.0.0-pre.1.nupkg.sha512"
+  ],
   "logs": []
 }
