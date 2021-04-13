@@ -469,23 +469,22 @@
   },
   "packageFolders": {
     "C:\\Users\\lasse\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj",
+      "projectUniqueName": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
       "projectName": "Zombie",
-      "projectPath": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj",
+      "projectPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
       "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\obj\\",
+      "outputPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -497,7 +496,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -509,7 +507,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "SfmlUI": {
             "target": "Package",
@@ -531,7 +528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
