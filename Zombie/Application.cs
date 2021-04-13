@@ -4,6 +4,8 @@ using System.Text;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using SfmlUI;
+using System.Xml;
 
 namespace Zombie
 {
@@ -11,11 +13,14 @@ namespace Zombie
     {
         private readonly RenderWindow _window;
         private readonly StartScreen _startScreen;
+        private readonly Login _login;
 
         private bool _isUpdating = true;
         public int state = 0;
 
-
+        public bool pressed = false;
+        public bool start = true;
+        public bool login = false;
 
         public Application()
         {
@@ -35,6 +40,7 @@ namespace Zombie
                 _window.DispatchEvents();
                 if (_isUpdating)
                 {
+                    _window.Clear();
                     switch (state)
                     {
                         case 0:
@@ -42,7 +48,7 @@ namespace Zombie
                             break;
 
                         case 1:
-                            _login.Draw();
+                            //_login.Draw();
                             break;
 
                         case 2:
@@ -58,7 +64,6 @@ namespace Zombie
                             break;
                     }
                 }
-                _window.Clear();
                 _window.Display();
 
             }   
@@ -66,6 +71,29 @@ namespace Zombie
         private void OnWindowClosed(object sender, EventArgs e)
         {
             _window.Close();
+        }
+
+        private void OnStartButtonPressed()
+        {
+            if (start == true)
+            {
+                state = 1;
+                pressed = true;
+            }
+
+        }
+
+        private void OnStartButtonReleased()
+        {
+            if (start == true)
+            {
+                if (pressed == true)
+                {
+                    pressed = false;
+                    login = true;
+                    start = false;
+                }
+            }
         }
     }
 }

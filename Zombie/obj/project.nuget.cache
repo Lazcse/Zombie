@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "loVg3J5kLI/WF+jqFH6+bOIlrrXTb3d6Gf2Fjt4B3XEesOFu/Q3kIZM8LiGmIWN1a/Ymv2eabGhoPhAopGaxgg==",
+  "dgSpecHash": "FK0m+hgT6hJjJadZeYF1p59oSDOcNA9FnRn9idTQo0j8cUGfW6RTwh8jmCcFCMrDrBqDGEsguWTr3fUfX8Yndg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\lasse\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
     "C:\\Users\\lasse\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
     "C:\\Users\\lasse\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512",
-    "C:\\Users\\lasse\\.nuget\\packages\\sfmlui\\1.0.0-pre.1\\sfmlui.1.0.0-pre.1.nupkg.sha512"
+    "C:\\Users\\lasse\\.nuget\\packages\\sfmlui\\1.0.0-pre.15\\sfmlui.1.0.0-pre.15.nupkg.sha512"
   ],
   "logs": []
 }

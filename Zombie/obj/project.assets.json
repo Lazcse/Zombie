@@ -302,7 +302,7 @@
           "lib/netstandard2.0/SFML.Window.dll": {}
         }
       },
-      "SfmlUI/1.0.0-pre.1": {
+      "SfmlUI/1.0.0-pre.15": {
         "type": "package",
         "dependencies": {
           "SFML.Net": "2.5.0"
@@ -449,22 +449,22 @@
         "sfml.window.nuspec"
       ]
     },
-    "SfmlUI/1.0.0-pre.1": {
-      "sha512": "vK1vW6oxyoygJy2n+zf5DiM8YgTum+OGWMIk4gSIts+3BSylWKBriggkgWkkfyXespoqT97nA5lx4eLToDTqHQ==",
+    "SfmlUI/1.0.0-pre.15": {
+      "sha512": "SAtq14+rugofsZYMSg79MNIadvjrALzL4ZE9j44DpvjhMMLX4tlyTiW3LjowtoTrLIZTZMGeSzXhyN9elbOjRA==",
       "type": "package",
-      "path": "sfmlui/1.0.0-pre.1",
+      "path": "sfmlui/1.0.0-pre.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netcoreapp3.1/SfmlUI.dll",
-        "sfmlui.1.0.0-pre.1.nupkg.sha512",
+        "sfmlui.1.0.0-pre.15.nupkg.sha512",
         "sfmlui.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "SfmlUI >= 1.0.0-pre.1"
+      "SfmlUI >= 1.0.0-pre.15"
     ]
   },
   "packageFolders": {
@@ -510,7 +510,7 @@
         "dependencies": {
           "SfmlUI": {
             "target": "Package",
-            "version": "[1.0.0-pre.1, )"
+            "version": "[1.0.0-pre.15, )"
           }
         },
         "imports": [

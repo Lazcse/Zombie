@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SfmlUI" Version="1.0.0-pre.1" />
+    <PackageReference Include="SfmlUI" Version="1.0.0-pre.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Arial.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
