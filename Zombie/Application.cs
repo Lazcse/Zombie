@@ -26,6 +26,7 @@ namespace Zombie
         {
             _window = new RenderWindow(new VideoMode(800, 600), "Zombie", Styles.Titlebar | Styles.Close);
             _startScreen = new StartScreen(_window);
+            _login = new Login(_window);
 
             _window.Closed += OnWindowClosed;
 
@@ -48,7 +49,7 @@ namespace Zombie
                             break;
 
                         case 1:
-                            //_login.Draw();
+                            _login.Draw();
                             break;
 
                         case 2:
