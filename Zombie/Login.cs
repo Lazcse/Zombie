@@ -16,21 +16,31 @@ namespace Zombie
         public Login(RenderWindow window)
         {
             _window = window;
-            text();
+            username();
+            password();
         }
 
         private Text _text;
         private Text _text1;
-
-        public void text()
+        private TextInput _textInput;
+        private TextInput _textInput1;
+        public void username()
         {
             _text = new Text("Username", new Font("Arial.ttf"), 60);
             _text.Position = new Vector2f(200, 200);
             _text.FillColor = new Color(128, 128, 128);
 
+            _textInput = new TextInput(_window, new Vector2f(20, 250), 500f, 20f, new Font("Arial.ttf")) { FieldColor = Color.Black, TextColor = Color.White };
+
+        }
+
+        public void password()
+        {
             _text1 = new Text("Password", new Font("Arial.ttf"), 60);
             _text1.Position = new Vector2f(200, 400);
             _text1.FillColor = new Color(128, 128, 128);
+
+            _textInput1 = new TextInput(_window, new Vector2f(20, 250), 500f, 20f, new Font("Arial.ttf")) { FieldColor = Color.Black, TextColor = Color.White };
         }
         public void Draw()
         {
