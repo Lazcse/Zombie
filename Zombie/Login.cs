@@ -59,8 +59,8 @@ namespace Zombie
             _button = new Button(_window, new Vector2f(600, 400), new Vector2f(100, 25));
             _button.OuterColor = Color.Transparent;
             _button.CenterColor = new Color(128, 128, 128);
-            _button.ButtonPressed += logButtonPressed;
-            _button.ButtonReleased += logButtonReleased;
+            _button.ButtonPressed += LogButtonPressed;
+            _button.ButtonReleased += LogButtonReleased;
 
             _text2 = new Text("Continue", new Font("Arial.ttf"), 20);
             _text2.Position = new Vector2f(605, 400);
@@ -75,12 +75,12 @@ namespace Zombie
             _button.Draw();
             _window.Draw(_text2);
         }
-        private void logButtonPressed()
+        private void LogButtonPressed()
         {
             OnLogButtonPressed?.Invoke();
         }
 
-        private void logButtonReleased()
+        private void LogButtonReleased()
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
