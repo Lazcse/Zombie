@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Text;
 using SFML.Graphics;
@@ -18,34 +17,67 @@ namespace Zombie
             _window = window;
             username();
             password();
+            Button();
         }
 
         private Text _text;
         private Text _text1;
         private TextInput _textInput;
         private TextInput _textInput1;
+
+        private Button _button;
+        private Text _text2;
+
+        public event Action OnLogButtonPressed;
+        public event Action OnLogButtonReleased;
+
         public void username()
         {
             _text = new Text("Username", new Font("Arial.ttf"), 60);
             _text.Position = new Vector2f(200, 200);
             _text.FillColor = new Color(128, 128, 128);
 
-            _textInput = new TextInput(_window, new Vector2f(20, 250), 500f, 20f, new Font("Arial.ttf")) { FieldColor = Color.Black, TextColor = Color.White };
+            _textInput = new TextInput(_window, new Vector2f(200, 275), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
 
         }
 
         public void password()
         {
             _text1 = new Text("Password", new Font("Arial.ttf"), 60);
-            _text1.Position = new Vector2f(200, 400);
+            _text1.Position = new Vector2f(200, 325);
             _text1.FillColor = new Color(128, 128, 128);
 
-            _textInput1 = new TextInput(_window, new Vector2f(20, 250), 500f, 20f, new Font("Arial.ttf")) { FieldColor = Color.Black, TextColor = Color.White };
+            _textInput1 = new TextInput(_window, new Vector2f(200,400), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+        }
+        public void Button()
+        {
+            _button = new Button(_window, new Vector2f(600, 400), new Vector2f(100, 25));
+            _button.OuterColor = Color.Transparent;
+            _button.CenterColor = new Color(128, 128, 128);
+            _button.ButtonPressed += logButtonPressed;
+            _button.ButtonReleased += logButtonReleased;
+
+            _text2 = new Text("Continue", new Font("Arial.ttf"), 20);
+            _text2.Position = new Vector2f(605, 400);
+            _text2.FillColor = new Color(0, 0, 0);
         }
         public void Draw()
         {
             _window.Draw(_text);
             _window.Draw(_text1);
+            _textInput.Draw();
+            _textInput1.Draw();
+            _button.Draw();
+            _window.Draw(_text2);
+        }
+        private void logButtonPressed()
+        {
+            OnLogButtonPressed?.Invoke();
+        }
+
+        private void logButtonReleased()
+        {
+            OnLogButtonReleased?.Invoke();
         }
     }
 }

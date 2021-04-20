@@ -32,6 +32,9 @@ namespace Zombie
 
             _startScreen.OnStartButtonPressed += OnStartButtonPressed;
             _startScreen.OnStartButtonReleased += OnStartButtonReleased;
+
+            _login.OnLogButtonPressed += OnLogButtonPressed;
+            _login.OnLogButtonReleased += OnLogButtonReleased;
         }
 
         public void Run()
@@ -93,6 +96,26 @@ namespace Zombie
                     pressed = false;
                     login = true;
                     start = false;
+                }
+            }
+        }
+        private void OnLogButtonPressed()
+        {
+            if (state == 1)
+            {
+                
+                pressed = true;
+            }
+
+        }
+
+        private void OnLogButtonReleased()
+        {
+            if (state == 1)
+            {
+                if (pressed == true)
+                {
+                 
                 }
             }
         }
