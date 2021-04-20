@@ -28,6 +28,11 @@ namespace Zombie
         private Button _button;
         private Text _text2;
 
+        private bool _loggedIn;
+
+        private string _username;
+        private string _password;
+
         public event Action OnLogButtonPressed;
         public event Action OnLogButtonReleased;
 
@@ -47,7 +52,7 @@ namespace Zombie
             _text1.Position = new Vector2f(200, 325);
             _text1.FillColor = new Color(128, 128, 128);
 
-            _textInput1 = new TextInput(_window, new Vector2f(200,400), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            _textInput1 = new TextInput(_window, new Vector2f(200, 400), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
         }
         public void Button()
         {
@@ -77,7 +82,16 @@ namespace Zombie
 
         private void logButtonReleased()
         {
-            OnLogButtonReleased?.Invoke();
+            _username = _textInput.Text;
+            _password = _textInput1.Text;
+
+            if (_loggedIn == true)
+            {
+                OnLogButtonReleased?.Invoke();
+            }
+            
         }
+
+        
     }
 }
