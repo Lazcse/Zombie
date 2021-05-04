@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj": {}
+    "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj": {
+    "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
         "projectName": "Zombie",
-        "projectPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
-        "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\obj\\",
+        "projectPath": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
+        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -41,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "SfmlUI": {
               "target": "Package",
               "version": "[1.0.0-pre.15, )"
@@ -61,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
