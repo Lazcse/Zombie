@@ -90,7 +90,7 @@ namespace Zombie
             if (/*_loggedIn ==*/ true)
             {
                _db = new dbLogin(_username,_password);
-                OnLogButtonReleased?.Invoke();
+                //OnLogButtonReleased?.Invoke();
             }
             
         }
