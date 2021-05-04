@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj": {}
+    "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj": {
+    "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj",
+        "projectUniqueName": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj",
         "projectName": "Zombie",
-        "projectPath": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj",
-        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\obj\\",
+        "projectPath": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\Zombie.csproj",
+        "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lasse\\source\\repos\\Zombie2\\Zombie\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

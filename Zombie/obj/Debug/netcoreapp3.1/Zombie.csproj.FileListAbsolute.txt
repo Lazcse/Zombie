@@ -155,3 +155,4 @@ C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.pdb
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.genruntimeconfig.cache
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.CoreCompileInputs.cache
 C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\lasse\source\repos\Zombie2\Zombie\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
