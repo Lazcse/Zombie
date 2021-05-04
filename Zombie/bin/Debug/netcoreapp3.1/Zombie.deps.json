@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Zombie/1.0.0": {
         "dependencies": {
+          "Json.Net": "1.0.31",
           "SfmlUI": "1.0.0-pre.15"
         },
         "runtime": {
@@ -308,6 +309,14 @@
           }
         }
       },
+      "Json.Net/1.0.31": {
+        "runtime": {
+          "lib/netstandard2.0/Json.Net.dll": {
+            "assemblyVersion": "1.0.31.1",
+            "fileVersion": "1.0.31.1"
+          }
+        }
+      },
       "SFML.Audio/2.5.0": {
         "dependencies": {
           "CSFML": "2.5.0",
@@ -391,6 +400,13 @@
       "sha512": "sha512-A3X+zyjAtvIQkpwCSS/F5fDOFRWeT+USIAK+DhGujNufF+qV1ty5cYGJihmmGeokX3yd89uZoNH8mcsmXCY/yw==",
       "path": "csfml/2.5.0",
       "hashPath": "csfml.2.5.0.nupkg.sha512"
+    },
+    "Json.Net/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vsmwinTBg7ziwRsWKBFkm9h1lL3vN4+bHUFuAwuyBMdWCxdD+BuuI2yLfZv4afY+LspjyeG6nIO7OCYUZPrhpg==",
+      "path": "json.net/1.0.31",
+      "hashPath": "json.net.1.0.31.nupkg.sha512"
     },
     "SFML.Audio/2.5.0": {
       "type": "package",

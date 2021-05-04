@@ -70,9 +70,9 @@ C:\Users\lasse\Source\Repos\Zombie2\Zombie\bin\Debug\netcoreapp3.1\runtimes\win-
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.csprojAssemblyReference.cache
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfoInputs.cache
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfo.cs
-C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.CoreCompileInputs.cache
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.CopyComplete
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.dll
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.pdb
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\obj\Debug\netcoreapp3.1\Zombie.genruntimeconfig.cache
 C:\Users\lasse\Source\Repos\Zombie2\Zombie\bin\Debug\netcoreapp3.1\Arial.ttf
+C:\Users\lasse\Source\Repos\Zombie2\Zombie\bin\Debug\netcoreapp3.1\Json.Net.dll

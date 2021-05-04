@@ -14,6 +14,8 @@ namespace Zombie
         private readonly RenderWindow _window;
         private readonly StartScreen _startScreen;
         private readonly Login _login;
+        private readonly Game _game;
+        private readonly Shop _shop;
 
         private bool _isUpdating = true;
         public int state = 0;
@@ -21,12 +23,15 @@ namespace Zombie
         public bool pressed = false;
         public bool start = true;
         public bool login = false;
+        public bool shop = false;
 
         public Application()
         {
             _window = new RenderWindow(new VideoMode(800, 600), "Zombie", Styles.Titlebar | Styles.Close);
             _startScreen = new StartScreen(_window);
             _login = new Login(_window);
+            _game = new Game(_window);
+            _shop = new Shop(_window);
 
             _window.Closed += OnWindowClosed;
 
@@ -35,6 +40,8 @@ namespace Zombie
 
             _login.OnLogButtonPressed += OnLogButtonPressed;
             _login.OnLogButtonReleased += OnLogButtonReleased;
+
+            _game.OnEPressed += OnEPressed;
         }
 
         public void Run()
@@ -56,11 +63,15 @@ namespace Zombie
                             break;
 
                         case 2:
-
+                            _game.Draw();
+                            if (shop)
+                            {
+                                _shop.Draw();
+                            }
                             break;
 
                         case 3:
-
+                            
                             break;
 
                         case 4:
@@ -115,8 +126,16 @@ namespace Zombie
             {
                 if (pressed == true)
                 {
-                 
+                    state = 2;
+                    pressed = false;
                 }
+            }
+        }
+        private void OnEPressed()
+        {
+            if(state == 1 & !shop)
+            {
+                shop = true;
             }
         }
     }

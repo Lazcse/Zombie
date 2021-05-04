@@ -11,5 +11,33 @@ namespace Zombie
 {
     class Game
     {
+        private RenderWindow _window;
+
+        public event Action OnEPressed;
+
+        private Text _text;
+        public Game(RenderWindow window)
+        {
+            _window = window;
+            
+        }
+        public void TestG()
+        {
+            _text = new Text("Game", new Font("Arial.ttf"), 60);
+            _text.Position = new Vector2f(200, 200);
+            _text.FillColor = new Color(128, 128, 128);
+
+        }
+        public void Draw()
+        {
+            _window.Draw(_text);
+        }
+        private void OnKeyPressed(object sender, KeyEventArgs e)
+        {
+            if (e.Code == Keyboard.Key.E)
+            {
+                OnEPressed?.Invoke();
+            }
+        }
     }
 }
