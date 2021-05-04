@@ -10,16 +10,10 @@ namespace Zombie
     {
         public dbLogin(string username, string password)
         {
-            string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/_json.php";
-            string data = "user=" + username + "&pass=" + password;
+            string URL = "http://htx-dev.ucholstebro.dk/HX-20-pr-B/magn5405/_json.php";
+            string data = "?user=" + username + "&pass=" + password;
 
-            using (WebClient wc = new WebClient())
-            {
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-                string HtmlResult = wc.UploadString(URL, data);
-            }
-
-            string reply = new WebClient().DownloadString(URL);
+            string reply = new WebClient().DownloadString(URL + data);
             switch (reply)
             {
                 case "success":

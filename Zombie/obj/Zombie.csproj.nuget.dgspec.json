@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {}
+    "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {
+    "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj",
         "projectName": "Zombie",
-        "projectPath": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
+        "projectPath": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj",
         "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\obj\\",
+        "outputPath": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

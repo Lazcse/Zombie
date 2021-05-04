@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ohAsbYeFad3ZBB4dA4taKV63Nt8FCk1SL2GJPBF0LXNUMOB9+CMed/qeqqtKsm9xT3JmAbUjVOHt1cqS5thtqQ==",
+  "dgSpecHash": "2lOwrg6gkUMlEhO0vWtGltkdBcsq7fp5ONhWgl69IIQ12toR35UAa8CcnwKXY/wbCBpQVxSRVqJr7wJt0maLzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\magnu\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
+  "projectFilePath": "C:\\Users\\magnu\\source\\repos\\Zombie\\Zombie\\Zombie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\magnu\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
     "C:\\Users\\magnu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
