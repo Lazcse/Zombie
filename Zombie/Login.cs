@@ -36,7 +36,7 @@ namespace Zombie
         public event Action OnLogButtonPressed;
         public event Action OnLogButtonReleased;
 
-        private readonly dbLogin _db;
+        private dbLogin _db;
 
         public void username()
         {
@@ -86,10 +86,10 @@ namespace Zombie
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
+            _db = new dbLogin(_username, _password);
 
             if (/*_loggedIn ==*/ true)
             {
-               _db = new dbLogin(_username,_password);
                 //OnLogButtonReleased?.Invoke();
             }
             
