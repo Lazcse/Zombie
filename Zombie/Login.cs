@@ -28,6 +28,9 @@ namespace Zombie
         private Button _button;
         private Text _text2;
 
+        private Text _text3;
+        private Text _text4;
+
         private bool _loggedIn;
 
         private string _username;
@@ -37,6 +40,8 @@ namespace Zombie
         public event Action OnLogButtonReleased;
 
         private dbLogin _db;
+
+        private bool _failed = true;
 
         public void username()
         {
@@ -68,6 +73,17 @@ namespace Zombie
             _text2.Position = new Vector2f(605, 400);
             _text2.FillColor = new Color(0, 0, 0);
         }
+        public void Failed()
+        {
+            _text3 = new Text("Login failed", new Font("Arial.ttf"), 20);
+            _text3.Position = new Vector2f(605, 400);
+            _text3.FillColor = new Color(255, 0, 0);
+
+            _text4 = new Text("Username or password was incorrect", new Font("Arial.ttf"), 20);
+            _text4.Position = new Vector2f(605, 400);
+            _text4.FillColor = new Color(255, 0, 0);
+        }
+
         public void Draw()
         {
             _window.Draw(_text);
@@ -76,6 +92,11 @@ namespace Zombie
             _textInput1.Draw();
             _button.Draw();
             _window.Draw(_text2);
+            if (_failed)
+            {
+                _window.Draw(_text3);
+                _window.Draw(_text4);
+            }
         }
         private void LogButtonPressed()
         {
@@ -86,11 +107,14 @@ namespace Zombie
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
-            _db = new dbLogin(_username, _password);
-
-            if (/*_loggedIn ==*/ true)
+            _db = new dbLogin(_username, _password,out bool loginState);
+            if (loginState)
             {
-                //OnLogButtonReleased?.Invoke();
+                OnLogButtonReleased?.Invoke();
+            }
+            else
+            {
+                _failed = true;
             }
             
         }

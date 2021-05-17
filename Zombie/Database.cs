@@ -8,7 +8,7 @@ namespace Zombie
 {
     class dbLogin
     {
-        public dbLogin(string username, string password)
+        public dbLogin(string username, string password, out bool loginState)
         {
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/_json.php";
             string data = "user=" + username + "&pass=" + password;
@@ -25,6 +25,7 @@ namespace Zombie
                 case "success":
                     {
                         Console.WriteLine("Login successful");
+                        loginState = true;
                         break;
                     }
                 case "wrongpass":
