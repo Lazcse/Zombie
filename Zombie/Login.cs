@@ -18,6 +18,7 @@ namespace Zombie
             username();
             password();
             Button();
+            Failed();
         }
 
         private Text _text;
@@ -31,8 +32,6 @@ namespace Zombie
         private Text _text3;
         private Text _text4;
 
-        private bool _loggedIn;
-
         private string _username;
         private string _password;
 
@@ -41,46 +40,46 @@ namespace Zombie
 
         private dbLogin _db;
 
-        private bool _failed = true;
+        private bool _failed;
 
         public void username()
         {
             _text = new Text("Username", new Font("Arial.ttf"), 60);
-            _text.Position = new Vector2f(200, 200);
+            _text.Position = new Vector2f(250, 100);
             _text.FillColor = new Color(128, 128, 128);
 
-            _textInput = new TextInput(_window, new Vector2f(200, 275), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            _textInput = new TextInput(_window, new Vector2f(260, 175), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
 
         }
 
         public void password()
         {
             _text1 = new Text("Password", new Font("Arial.ttf"), 60);
-            _text1.Position = new Vector2f(200, 325);
+            _text1.Position = new Vector2f(250, 225);
             _text1.FillColor = new Color(128, 128, 128);
 
-            _textInput1 = new TextInput(_window, new Vector2f(200, 400), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
         }
         public void Button()
         {
-            _button = new Button(_window, new Vector2f(600, 400), new Vector2f(100, 25));
+            _button = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
             _button.OuterColor = Color.Transparent;
             _button.CenterColor = new Color(128, 128, 128);
             _button.ButtonPressed += LogButtonPressed;
             _button.ButtonReleased += LogButtonReleased;
 
             _text2 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text2.Position = new Vector2f(605, 400);
+            _text2.Position = new Vector2f(420, 355);
             _text2.FillColor = new Color(0, 0, 0);
         }
         public void Failed()
         {
-            _text3 = new Text("Login failed", new Font("Arial.ttf"), 20);
-            _text3.Position = new Vector2f(605, 400);
+            _text3 = new Text("Login failed", new Font("Arial.ttf"), 15);
+            _text3.Position = new Vector2f(260, 360);
             _text3.FillColor = new Color(255, 0, 0);
 
-            _text4 = new Text("Username or password was incorrect", new Font("Arial.ttf"), 20);
-            _text4.Position = new Vector2f(605, 400);
+            _text4 = new Text("Username or password was incorrect", new Font("Arial.ttf"), 15);
+            _text4.Position = new Vector2f(260, 380);
             _text4.FillColor = new Color(255, 0, 0);
         }
 

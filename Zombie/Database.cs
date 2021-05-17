@@ -10,6 +10,7 @@ namespace Zombie
     {
         public dbLogin(string username, string password, out bool loginState)
         {
+            loginState = false;
             string URL = "http://htx-dev.ucholstebro.dk/HX-20-pr-B/magn5405/_json.php";
             string data = "?user=" + username + "&pass=" + password;
 
