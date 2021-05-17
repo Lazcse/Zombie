@@ -38,7 +38,24 @@ namespace Zombie
         }
         private void OnKeyPressed(object sender, KeyEventArgs e)
         {
-            if (roundOver)
+            if (!roundOver) {
+                if (e.Code == Keyboard.Key.W)
+                {
+                    
+                }
+                else if (e.Code == Keyboard.Key.S)
+                {
+                    
+                }
+                else if (e.Code == Keyboard.Key.A)
+                {
+                    
+                }
+                else if (e.Code == Keyboard.Key.D)
+                {
+                    
+                }
+            } else if (roundOver)
             {
                 if (e.Code == Keyboard.Key.E)
                 {
