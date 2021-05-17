@@ -24,6 +24,7 @@ namespace Zombie
         public bool start = true;
         public bool login = false;
         public bool shop = false;
+        public bool roundOver = false;
 
         public Application()
         {
@@ -42,6 +43,8 @@ namespace Zombie
             _login.OnLogButtonReleased += OnLogButtonReleased;
 
             _game.OnEPressed += OnEPressed;
+            _game.OnSpacePressed += OnSpacePressed;
+            _game.OnEscapePressed += OnEscapePressed;
         }
 
         public void Run()
@@ -133,9 +136,23 @@ namespace Zombie
         }
         private void OnEPressed()
         {
-            if(state == 1 & !shop)
+            if(state == 2)
             {
-                shop = true;
+                shop = !shop;
+            }
+        }
+        private void OnSpacePressed()
+        {
+            if (state == 2)
+            {
+                shop = !shop;
+            }
+        }
+        private void OnEscapePressed()
+        {
+            if (state == 2)
+            {
+                shop = !shop;
             }
         }
     }

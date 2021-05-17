@@ -14,12 +14,16 @@ namespace Zombie
         private RenderWindow _window;
 
         public event Action OnEPressed;
+        public event Action OnEscapePressed;
+        public event Action OnSpacePressed;
 
         private Text _text;
+
+        private bool roundOver = true;
         public Game(RenderWindow window)
         {
             _window = window;
-            
+
         }
         public void TestG()
         {
@@ -34,9 +38,18 @@ namespace Zombie
         }
         private void OnKeyPressed(object sender, KeyEventArgs e)
         {
-            if (e.Code == Keyboard.Key.E)
+            if (roundOver)
             {
-                OnEPressed?.Invoke();
+                if (e.Code == Keyboard.Key.E)
+                {
+                    OnEPressed?.Invoke();
+                }else if (e.Code == Keyboard.Key.Escape)
+                {
+                    OnEscapePressed?.Invoke();
+                }else if (e.Code == Keyboard.Key.Space)
+                {
+                    OnSpacePressed?.Invoke();
+                }
             }
         }
     }
