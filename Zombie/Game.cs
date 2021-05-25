@@ -20,6 +20,11 @@ namespace Zombie
         private bool roundOver = true;
         private int stop = 0;
 
+        private bool up = false;
+        private bool down = false;
+        private bool left = false;
+        private bool right = false;
+
         private RectangleShape _player;
         private Vector2f _position = new Vector2f(0, 0);
         private int _updateX = 0;
@@ -77,19 +82,37 @@ namespace Zombie
             {
                 if (e.Code == Keyboard.Key.W)
                 {
-                    _updateY = -1;
+                    if (!up)
+                    {
+                        _updateY += -1;
+                        up = true;
+                    }
+                    
                 }
                 else if (e.Code == Keyboard.Key.S)
                 {
-                    _updateY = 1;
+                    if (!down)
+                    {
+                        _updateY += 1;
+                        down = true;
+                    }
+                    
                 }
                 else if (e.Code == Keyboard.Key.A)
                 {
-                    _updateX = -1;
+                    if (!left)
+                    {
+                        _updateX += -1;
+                        left = true;
+                    }
                 }
                 else if (e.Code == Keyboard.Key.D)
                 {
-                    _updateX = 1;
+                    if (!right)
+                    {
+                        _updateX += 1;
+                        right = true;
+                    }
                 }
             }
             if (e.Code == Keyboard.Key.Escape)
@@ -145,19 +168,23 @@ namespace Zombie
             {
                 if (e.Code == Keyboard.Key.W)
                 {
-                    _updateY = 0;
+                    _updateY += 1;
+                    up = false;
                 }
                 else if (e.Code == Keyboard.Key.S)
                 {
-                    _updateY = 0;
+                    _updateY += -1;
+                    down = false;
                 }
                 else if (e.Code == Keyboard.Key.A)
                 {
-                    _updateX = 0;
+                    _updateX += 1;
+                    left = false;
                 }
                 else if (e.Code == Keyboard.Key.D)
                 {
-                    _updateX = 0;
+                    _updateX += -1;
+                    right = false;
                 }
             }
         }
