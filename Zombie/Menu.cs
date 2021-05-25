@@ -12,14 +12,23 @@ namespace Zombie
     class Menu
     {
         private RenderWindow _window;
+        private Text _text;
         public Menu(RenderWindow window)
         {
             _window = window;
+            TestM();
         }
 
+        public void TestM()
+        {
+            _text = new Text("Menu", new Font("Arial.ttf"), 60);
+            _text.Position = new Vector2f(200, 200);
+            _text.FillColor = new Color(128, 128, 128);
+
+        }
         public void Draw()
         {
-           
+            _window.Draw(_text);
         }
     }
 }

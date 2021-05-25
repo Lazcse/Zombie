@@ -72,6 +72,7 @@ namespace Zombie
                             break;
 
                         case 2:
+                            _game.Update();
                             _game.Draw();
                             if (shop)
                             {
