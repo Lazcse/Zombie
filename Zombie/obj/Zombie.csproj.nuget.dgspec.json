@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj": {}
+    "C:\\Users\\lasse\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj": {
+    "C:\\Users\\lasse\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
+        "projectUniqueName": "C:\\Users\\lasse\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
         "projectName": "Zombie",
-        "projectPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\Zombie.csproj",
+        "projectPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie\\Zombie\\Zombie.csproj",
         "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie2\\Zombie\\obj\\",
+        "outputPath": "C:\\Users\\lasse\\Source\\Repos\\Zombie\\Zombie\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
