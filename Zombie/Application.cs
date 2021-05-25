@@ -53,6 +53,9 @@ namespace Zombie
             _game.OnEPressed += OnEPressed;
             _game.OnSpacePressed += OnSpacePressed;
             _game.OnEscapePressed += OnEscapePressed;
+
+            _shop.OnButtonPressed += OnButtonPressed;
+
         }
 
         public void Run()
@@ -185,6 +188,42 @@ namespace Zombie
                     menu = !menu;
                 }
             }
+        }
+        private void OnButtonPressed()
+        {
+
+        }
+        private void OnButtonPressed2()
+        {
+
+        }
+        private void OnButtonPressed3()
+        {
+
+        }
+        private void OnButtonPressed4()
+        {
+
+        }
+        private void OnButtonPressed5()
+        {
+
+        }
+        private void OnButtonPressed6()
+        {
+
+        }
+        private void OnButtonPressed7()
+        {
+
+        }
+        private void OnButtonPressed8()
+        {
+
+        }
+        private void OnButtonPressed9()
+        {
+
         }
     }
 }

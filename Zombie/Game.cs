@@ -37,7 +37,7 @@ namespace Zombie
             _window.KeyPressed += OnKeyPressed;
             _window.KeyReleased += OnKeyReleased;
         }
-        public void Player()
+        private void Player()
         {
             _player = new RectangleShape(new Vector2f(50, 50));
             _player.Position = _position;
