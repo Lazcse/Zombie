@@ -30,6 +30,7 @@ namespace Zombie
             _window = window;
             Player();
             _window.KeyPressed += OnKeyPressed;
+            _window.KeyReleased += OnKeyReleased;
         }
         public void Player()
         {
@@ -135,6 +136,28 @@ namespace Zombie
                         stop = 0;
                         OnSpacePressed?.Invoke();
                     }
+                }
+            }
+        }
+        private void OnKeyReleased(object sender, KeyEventArgs e)
+        {
+            if (stop == 0)
+            {
+                if (e.Code == Keyboard.Key.W)
+                {
+                    _updateY = 0;
+                }
+                else if (e.Code == Keyboard.Key.S)
+                {
+                    _updateY = 0;
+                }
+                else if (e.Code == Keyboard.Key.A)
+                {
+                    _updateX = 0;
+                }
+                else if (e.Code == Keyboard.Key.D)
+                {
+                    _updateX = 0;
                 }
             }
         }

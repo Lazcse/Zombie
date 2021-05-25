@@ -30,6 +30,8 @@ namespace Zombie
         private bool menu = false;
         private bool pause = false;
 
+        private int i = 0;
+
         public Application()
         {
             _window = new RenderWindow(new VideoMode(800, 600), "Zombie", Styles.Titlebar | Styles.Close);
@@ -72,7 +74,15 @@ namespace Zombie
                             break;
 
                         case 2:
-                            _game.Update();
+                            i++;
+                            if (i == 1)
+                            {
+                                _game.Update();
+                            }
+                            else if (i == 5)
+                            {
+                                i = 0;
+                            }
                             _game.Draw();
                             if (shop)
                             {
