@@ -38,32 +38,36 @@ namespace Zombie
         }
         private void OnKeyPressed(object sender, KeyEventArgs e)
         {
-            if (!roundOver) {
-                if (e.Code == Keyboard.Key.W)
-                {
-                    
-                }
-                else if (e.Code == Keyboard.Key.S)
-                {
-                    
-                }
-                else if (e.Code == Keyboard.Key.A)
-                {
-                    
-                }
-                else if (e.Code == Keyboard.Key.D)
-                {
-                    
-                }
-            } else if (roundOver)
+            if (e.Code == Keyboard.Key.W)
+            {
+
+            }
+            else if (e.Code == Keyboard.Key.S)
+            {
+
+            }
+            else if (e.Code == Keyboard.Key.A)
+            {
+
+            }
+            else if (e.Code == Keyboard.Key.D)
+            {
+
+            }
+            else if (e.Code == Keyboard.Key.Escape)
+            {
+                OnEscapePressed?.Invoke();
+            }
+
+            if (roundOver)
             {
                 if (e.Code == Keyboard.Key.E)
                 {
                     OnEPressed?.Invoke();
-                }else if (e.Code == Keyboard.Key.Escape)
-                {
-                    OnEscapePressed?.Invoke();
-                }else if (e.Code == Keyboard.Key.Space)
+                }
+            } else if (!roundOver)
+            {
+                if (e.Code == Keyboard.Key.Space)
                 {
                     OnSpacePressed?.Invoke();
                 }

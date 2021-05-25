@@ -21,11 +21,13 @@ namespace Zombie
         private bool _isUpdating = true;
         public int state = 0;
 
-        public bool pressed = false;
-        public bool start = true;
-        public bool login = false;
-        public bool shop = false;
-        public bool roundOver = false;
+        private bool pressed = false;
+        private bool start = true;
+        private bool login = false;
+        private bool shop = false;
+
+        private bool menu = false;
+        private bool pause = false;
 
         public Application()
         {
@@ -146,14 +148,20 @@ namespace Zombie
         {
             if (state == 2)
             {
-                shop = !shop;
+                pause = !pause;
             }
         }
         private void OnEscapePressed()
         {
             if (state == 2)
             {
-                shop = !shop;
+                if (shop)
+                {
+                    shop = false;
+                } else if (!shop)
+                {
+                    menu = !menu;
+                }
             }
         }
     }
