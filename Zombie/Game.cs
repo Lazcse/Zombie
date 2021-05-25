@@ -52,22 +52,30 @@ namespace Zombie
             {
                 _position.X = 800 - _player.Size.X;
                 _updateX = 0;
+                right = false;
+                left = false;
             }
             else if (_position.X < 0)
             {
                 _position.X = 0;
                 _updateX = 0;
+                right = false;
+                left = false;
             }
 
             if (_position.Y > 600 - _player.Size.Y)
             {
                 _position.Y = 600 - _player.Size.Y;
                 _updateY = 0;
+                up = false;
+                down = false;
             }
             else if (_position.Y < 0)
             {
                 _position.Y = 0;
                 _updateY = 0;
+                up = false;
+                down = false;
             }
 
             _player.Position = _position;
@@ -168,23 +176,36 @@ namespace Zombie
             {
                 if (e.Code == Keyboard.Key.W)
                 {
-                    _updateY += 1;
-                    up = false;
+                    if (up)
+                    {
+                        _updateY += 1;
+                        up = false;
+                    }
+                    
                 }
                 else if (e.Code == Keyboard.Key.S)
                 {
-                    _updateY += -1;
-                    down = false;
+                    if (down)
+                    {
+                        _updateY += -1;
+                        down = false;
+                    }
                 }
                 else if (e.Code == Keyboard.Key.A)
                 {
-                    _updateX += 1;
-                    left = false;
+                    if (left)
+                    {
+                        _updateX += 1;
+                        left = false;
+                    }
                 }
                 else if (e.Code == Keyboard.Key.D)
                 {
-                    _updateX += -1;
-                    right = false;
+                    if (right)
+                    {
+                        _updateX += -1;
+                        right = false;
+                    }
                 }
             }
         }
