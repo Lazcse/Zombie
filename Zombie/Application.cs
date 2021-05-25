@@ -9,7 +9,6 @@ using System.Xml;
 
 namespace Zombie
 {
-    //test
     class Application
     {
         private readonly RenderWindow _window;
@@ -17,6 +16,8 @@ namespace Zombie
         private readonly Login _login;
         private readonly Game _game;
         private readonly Shop _shop;
+        private readonly Menu _menu;
+        private readonly PauseScreen _pauseScreen;
 
         private bool _isUpdating = true;
         public int state = 0;
@@ -36,6 +37,8 @@ namespace Zombie
             _login = new Login(_window);
             _game = new Game(_window);
             _shop = new Shop(_window);
+            _menu = new Menu(_window);
+            _pauseScreen = new PauseScreen(_window);
 
             _window.Closed += OnWindowClosed;
 
@@ -73,6 +76,14 @@ namespace Zombie
                             if (shop)
                             {
                                 _shop.Draw();
+                            }
+                            if (pause)
+                            {
+                                _pauseScreen.Draw();
+                            }
+                            if (menu)
+                            {
+                                _menu.Draw();
                             }
                             break;
 
