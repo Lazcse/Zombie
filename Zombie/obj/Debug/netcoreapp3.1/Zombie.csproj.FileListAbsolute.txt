@@ -1,0 +1,13 @@
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.exe
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.deps.json
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.runtimeconfig.json
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.runtimeconfig.dev.json
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.dll
+C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Zombie.pdb
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csprojAssemblyReference.cache
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfoInputs.cache
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfo.cs
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.CoreCompileInputs.cache
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.dll
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.pdb
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.genruntimeconfig.cache
