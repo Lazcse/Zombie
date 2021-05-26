@@ -113,12 +113,10 @@ namespace Zombie
                             if (shop)
                             {
                                 _shop.Draw();
-                            }
-                            if (pause)
+                            }else if (pause)
                             {
                                 _pauseScreen.Draw();
-                            }
-                            if (menu)
+                            }else if (menu)
                             {
                                 _menu.Draw();
                             }
