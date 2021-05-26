@@ -235,3 +235,4 @@ C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.
 C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.dll
 C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.pdb
 C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.genruntimeconfig.cache
+C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.AssemblyReference.cache
