@@ -31,8 +31,17 @@ namespace Zombie
         private bool pause = false;
 
         private int i = 0;
+        public int gold = 0;
 
-        public int Gold = 0;
+        private bool life = false;
+        private bool damage = false;
+        private bool shield = false;
+        private bool damage2 = false;
+        private bool life2 = false;
+        private bool shield2 = false;
+        private bool damage3 = false;
+        private bool reach = false;
+        private bool life3 = false;
 
         public Application()
         {
@@ -66,6 +75,7 @@ namespace Zombie
             _shop.OnButtonPressed8 += OnButtonPressed8;
             _shop.OnButtonPressed9 += OnButtonPressed9;
 
+            _game.GoldUp += GoldUp;
         }
 
         public void Run()
@@ -96,6 +106,7 @@ namespace Zombie
                             {
                                 i = 0;
                             }
+                            _game.GoldUpdate();
                             _game.Draw();
                             if (shop)
                             {
@@ -201,39 +212,89 @@ namespace Zombie
         }
         private void OnButtonPressed()
         {
-
+            if (gold >= 100 && !life) 
+            {
+                gold = gold - 100;
+                life = true;
+                _shop.Button1();
+            }
         }
         private void OnButtonPressed2()
         {
-
+            if (gold >= 200  && !damage)
+            {
+                gold = gold - 200;
+                damage = true;
+                _shop.Button2();
+            }
         }
         private void OnButtonPressed3()
         {
-
+            if (gold >= 300 && !shield)
+            {
+                gold = gold - 300;
+                shield = true;
+                _shop.Button3();
+            }
         }
         private void OnButtonPressed4()
         {
-
+            if (gold >= 400 && !damage2)
+            {
+                gold = gold - 400;
+                damage2 = true;
+                _shop.Button4();
+            }
         }
         private void OnButtonPressed5()
         {
-
+            if (gold >= 500 && !life2)
+            {
+                gold = gold - 500;
+                life2 = true;
+                _shop.Button5();
+            }
         }
         private void OnButtonPressed6()
         {
-
+            if (gold >= 600 && !shield2)
+            {
+                gold = gold - 600;
+                shield2 = true;
+                _shop.Button6();
+            }
         }
         private void OnButtonPressed7()
         {
-
+            if (gold >= 700 && !damage3)
+            {
+                gold = gold - 700;
+                damage3 = true;
+                _shop.Button7();
+            }
         }
         private void OnButtonPressed8()
         {
-
+            if (gold >= 800 && !reach)
+            {
+                gold = gold - 800;
+                reach = true;
+                _shop.Button8();
+            }
         }
         private void OnButtonPressed9()
         {
+            if (gold >= 900 && !life3)
+            {
+                gold = gold - 900;
+                life3 = true;
+                _shop.Button9();
+            }
+        }
 
+        private void GoldUp()
+        {
+            gold++;
         }
     }
 }

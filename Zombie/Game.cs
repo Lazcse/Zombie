@@ -16,6 +16,7 @@ namespace Zombie
         public event Action OnEPressed;
         public event Action OnEscapePressed;
         public event Action OnSpacePressed;
+        public event Action GoldUp;
 
         private bool roundOver = true;
         private int stop = 0;
@@ -30,6 +31,8 @@ namespace Zombie
         private int _updateX = 0;
         private int _updateY = 0;
 
+        private int i = 0;
+
         public Game(RenderWindow window)
         {
             _window = window;
@@ -43,6 +46,18 @@ namespace Zombie
             _player.Position = _position;
             _player.FillColor = new Color(0, 0, 255);
 
+        }
+        public void GoldUpdate()
+        {
+            if (!roundOver)
+            {
+                i++;
+                if(i == 100)
+                {
+                    i = 0;
+                    GoldUp?.Invoke();
+                }
+            }
         }
         public void Update()
         {
@@ -121,6 +136,9 @@ namespace Zombie
                         _updateX += 1;
                         right = true;
                     }
+                }else if (e.Code == Keyboard.Key.R)
+                {
+                    roundOver = !roundOver;
                 }
             }
             if (e.Code == Keyboard.Key.Escape)

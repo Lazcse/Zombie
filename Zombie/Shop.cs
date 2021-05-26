@@ -53,47 +53,47 @@ namespace Zombie
         
         private void Buttons()
         {
-            _button = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button = new Button(_window, new Vector2f(100, 100), new Vector2f(100, 100));
             _button.OuterColor = Color.Transparent;
             _button.CenterColor = new Color(128, 128, 128);
             _button.ButtonPressed += ButtonPressed;
 
-            _button2 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button2 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button2.OuterColor = Color.Transparent;
             _button2.CenterColor = new Color(128, 128, 128);
             _button2.ButtonPressed += ButtonPressed2;
 
-            _button3 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button3 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button3.OuterColor = Color.Transparent;
             _button3.CenterColor = new Color(128, 128, 128);
             _button3.ButtonPressed += ButtonPressed3;
 
-            _button4 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button4 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button4.OuterColor = Color.Transparent;
             _button4.CenterColor = new Color(128, 128, 128);
             _button4.ButtonPressed += ButtonPressed4;
 
-            _button5 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button5 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button5.OuterColor = Color.Transparent;
             _button5.CenterColor = new Color(128, 128, 128);
             _button5.ButtonPressed += ButtonPressed5;
 
-            _button6 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button6 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button6.OuterColor = Color.Transparent;
             _button6.CenterColor = new Color(128, 128, 128);
             _button6.ButtonPressed += ButtonPressed6;
 
-            _button7 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button7 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button7.OuterColor = Color.Transparent;
             _button7.CenterColor = new Color(128, 128, 128);
             _button7.ButtonPressed += ButtonPressed7;
 
-            _button8 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button8 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button8.OuterColor = Color.Transparent;
             _button8.CenterColor = new Color(128, 128, 128);
             _button8.ButtonPressed += ButtonPressed8;
 
-            _button9 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
+            _button9 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
             _button9.OuterColor = Color.Transparent;
             _button9.CenterColor = new Color(128, 128, 128);
             _button9.ButtonPressed += ButtonPressed9;
@@ -138,6 +138,43 @@ namespace Zombie
             _text9.Position = new Vector2f(420, 355);
             _text9.FillColor = new Color(0, 0, 0);
 
+        }
+
+        public void Button1()
+        {
+            _button.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button2()
+        {
+            _button2.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button3()
+        {
+            _button3.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button4()
+        {
+            _button4.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button5()
+        {
+            _button5.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button6()
+        {
+            _button6.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button7()
+        {
+            _button7.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button8()
+        {
+            _button8.CenterColor = new Color(0, 128, 0);
+        }
+        public void Button9()
+        {
+            _button9.CenterColor = new Color(0, 128, 0);
         }
 
         public void Draw()
