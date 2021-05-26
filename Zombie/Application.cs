@@ -212,7 +212,7 @@ namespace Zombie
         }
         private void OnButtonPressed()
         {
-            if (gold >= 100 && !life) 
+            if (gold >= 100 && !life && shop) 
             {
                 gold = gold - 100;
                 life = true;
@@ -221,7 +221,7 @@ namespace Zombie
         }
         private void OnButtonPressed2()
         {
-            if (gold >= 200  && !damage)
+            if (gold >= 200  && !damage && shop)
             {
                 gold = gold - 200;
                 damage = true;
@@ -230,7 +230,7 @@ namespace Zombie
         }
         private void OnButtonPressed3()
         {
-            if (gold >= 300 && !shield)
+            if (gold >= 300 && !shield && shop)
             {
                 gold = gold - 300;
                 shield = true;
@@ -239,7 +239,7 @@ namespace Zombie
         }
         private void OnButtonPressed4()
         {
-            if (gold >= 400 && !damage2)
+            if (gold >= 400 && !damage2 && shop)
             {
                 gold = gold - 400;
                 damage2 = true;
@@ -248,7 +248,7 @@ namespace Zombie
         }
         private void OnButtonPressed5()
         {
-            if (gold >= 500 && !life2)
+            if (gold >= 500 && !life2 && shop)
             {
                 gold = gold - 500;
                 life2 = true;
@@ -257,7 +257,7 @@ namespace Zombie
         }
         private void OnButtonPressed6()
         {
-            if (gold >= 600 && !shield2)
+            if (gold >= 600 && !shield2 && shop)
             {
                 gold = gold - 600;
                 shield2 = true;
@@ -266,7 +266,7 @@ namespace Zombie
         }
         private void OnButtonPressed7()
         {
-            if (gold >= 700 && !damage3)
+            if (gold >= 700 && !damage3 && shop)
             {
                 gold = gold - 700;
                 damage3 = true;
@@ -275,7 +275,7 @@ namespace Zombie
         }
         private void OnButtonPressed8()
         {
-            if (gold >= 800 && !reach)
+            if (gold >= 800 && !reach && shop)
             {
                 gold = gold - 800;
                 reach = true;
@@ -284,7 +284,7 @@ namespace Zombie
         }
         private void OnButtonPressed9()
         {
-            if (gold >= 900 && !life3)
+            if (gold >= 900 && !life3 && shop)
             {
                 gold = gold - 900;
                 life3 = true;

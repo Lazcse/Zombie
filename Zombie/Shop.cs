@@ -53,47 +53,47 @@ namespace Zombie
         
         private void Buttons()
         {
-            _button = new Button(_window, new Vector2f(100, 100), new Vector2f(100, 100));
+            _button = new Button(_window, new Vector2f(150, 50), new Vector2f(100, 100));
             _button.OuterColor = Color.Transparent;
             _button.CenterColor = new Color(128, 128, 128);
             _button.ButtonPressed += ButtonPressed;
 
-            _button2 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button2 = new Button(_window, new Vector2f(350, 50), new Vector2f(100, 100));
             _button2.OuterColor = Color.Transparent;
             _button2.CenterColor = new Color(128, 128, 128);
             _button2.ButtonPressed += ButtonPressed2;
 
-            _button3 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button3 = new Button(_window, new Vector2f(550, 50), new Vector2f(100, 100));
             _button3.OuterColor = Color.Transparent;
             _button3.CenterColor = new Color(128, 128, 128);
             _button3.ButtonPressed += ButtonPressed3;
 
-            _button4 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button4 = new Button(_window, new Vector2f(150, 250), new Vector2f(100, 100));
             _button4.OuterColor = Color.Transparent;
             _button4.CenterColor = new Color(128, 128, 128);
             _button4.ButtonPressed += ButtonPressed4;
 
-            _button5 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button5 = new Button(_window, new Vector2f(350, 250), new Vector2f(100, 100));
             _button5.OuterColor = Color.Transparent;
             _button5.CenterColor = new Color(128, 128, 128);
             _button5.ButtonPressed += ButtonPressed5;
 
-            _button6 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button6 = new Button(_window, new Vector2f(550, 250), new Vector2f(100, 100));
             _button6.OuterColor = Color.Transparent;
             _button6.CenterColor = new Color(128, 128, 128);
             _button6.ButtonPressed += ButtonPressed6;
 
-            _button7 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button7 = new Button(_window, new Vector2f(150, 450), new Vector2f(100, 100));
             _button7.OuterColor = Color.Transparent;
             _button7.CenterColor = new Color(128, 128, 128);
             _button7.ButtonPressed += ButtonPressed7;
 
-            _button8 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button8 = new Button(_window, new Vector2f(350, 450), new Vector2f(100, 100));
             _button8.OuterColor = Color.Transparent;
             _button8.CenterColor = new Color(128, 128, 128);
             _button8.ButtonPressed += ButtonPressed8;
 
-            _button9 = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 100));
+            _button9 = new Button(_window, new Vector2f(550, 450), new Vector2f(100, 100));
             _button9.OuterColor = Color.Transparent;
             _button9.CenterColor = new Color(128, 128, 128);
             _button9.ButtonPressed += ButtonPressed9;
@@ -102,40 +102,40 @@ namespace Zombie
 
         private void Texts()
         {
-            _text = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text.Position = new Vector2f(420, 355);
+            _text = new Text("Life", new Font("Arial.ttf"), 20);
+            _text.Position = new Vector2f(180, 90);
             _text.FillColor = new Color(0, 0, 0);
 
-            _text2 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text2.Position = new Vector2f(420, 355);
+            _text2 = new Text("Damage", new Font("Arial.ttf"), 20);
+            _text2.Position = new Vector2f(360, 90);
             _text2.FillColor = new Color(0, 0, 0);
 
-            _text3 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text3.Position = new Vector2f(420, 355);
+            _text3 = new Text("Shield", new Font("Arial.ttf"), 20);
+            _text3.Position = new Vector2f(575, 90);
             _text3.FillColor = new Color(0, 0, 0);
 
-            _text4 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text4.Position = new Vector2f(420, 355);
+            _text4 = new Text("Damage", new Font("Arial.ttf"), 20);
+            _text4.Position = new Vector2f(160, 290);
             _text4.FillColor = new Color(0, 0, 0);
 
-            _text5 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text5.Position = new Vector2f(420, 355);
+            _text5 = new Text("Life", new Font("Arial.ttf"), 20);
+            _text5.Position = new Vector2f(380, 290);
             _text5.FillColor = new Color(0, 0, 0);
 
-            _text6 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text6.Position = new Vector2f(420, 355);
+            _text6 = new Text("Shield", new Font("Arial.ttf"), 20);
+            _text6.Position = new Vector2f(575, 290);
             _text6.FillColor = new Color(0, 0, 0);
 
-            _text7 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text7.Position = new Vector2f(420, 355);
+            _text7 = new Text("Damage", new Font("Arial.ttf"), 20);
+            _text7.Position = new Vector2f(160, 490);
             _text7.FillColor = new Color(0, 0, 0);
 
-            _text8 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text8.Position = new Vector2f(420, 355);
+            _text8 = new Text("Reach", new Font("Arial.ttf"), 20);
+            _text8.Position = new Vector2f(370, 490);
             _text8.FillColor = new Color(0, 0, 0);
 
-            _text9 = new Text("Continue", new Font("Arial.ttf"), 20);
-            _text9.Position = new Vector2f(420, 355);
+            _text9 = new Text("Life", new Font("Arial.ttf"), 20);
+            _text9.Position = new Vector2f(580, 490);
             _text9.FillColor = new Color(0, 0, 0);
 
         }
