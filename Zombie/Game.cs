@@ -141,29 +141,6 @@ namespace Zombie
                     roundOver = !roundOver;
                 }
             }
-            if (e.Code == Keyboard.Key.Escape)
-            {
-                if (stop == 0)
-                {
-                    stop = 1;
-                    _updateX = 0;
-                    _updateY = 0;
-                    up = false;
-                    down = false;
-                    left = false;
-                    right = false;
-                    OnEscapePressed?.Invoke();
-                } else if (stop == 1) {
-                    stop = 0;
-                    OnEscapePressed?.Invoke();
-                }
-                else if (stop == 2)
-                {
-                    stop = 0;
-                    OnEPressed?.Invoke();
-                }
-            }
-
             if (roundOver)
             {
                 if (e.Code == Keyboard.Key.E)
@@ -179,6 +156,29 @@ namespace Zombie
                         right = false;
                         OnEPressed?.Invoke();
                     } else if (stop == 2)
+                    {
+                        stop = 0;
+                        OnEPressed?.Invoke();
+                    }
+                }else if (e.Code == Keyboard.Key.Escape)
+                {
+                    if (stop == 0)
+                    {
+                        stop = 1;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
+                        OnEscapePressed?.Invoke();
+                    }
+                    else if (stop == 1)
+                    {
+                        stop = 0;
+                        OnEscapePressed?.Invoke();
+                    }
+                    else if (stop == 2)
                     {
                         stop = 0;
                         OnEPressed?.Invoke();
