@@ -128,6 +128,12 @@ namespace Zombie
                 if (stop == 0)
                 {
                     stop = 1;
+                    _updateX = 0;
+                    _updateY = 0;
+                    up = false;
+                    down = false;
+                    left = false;
+                    right = false;
                     OnEscapePressed?.Invoke();
                 } else if (stop == 1) {
                     stop = 0;
@@ -147,6 +153,12 @@ namespace Zombie
                     if (stop == 0)
                     {
                         stop = 2;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
                         OnEPressed?.Invoke();
                     } else if (stop == 2)
                     {
@@ -161,6 +173,12 @@ namespace Zombie
                     if (stop == 0)
                     {
                         stop = 3;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
                         OnSpacePressed?.Invoke();
                     } else if (stop == 3)
                     {

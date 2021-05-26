@@ -32,6 +32,8 @@ namespace Zombie
 
         private int i = 0;
 
+        public int Gold = 0;
+
         public Application()
         {
             _window = new RenderWindow(new VideoMode(800, 600), "Zombie", Styles.Titlebar | Styles.Close);
@@ -55,6 +57,14 @@ namespace Zombie
             _game.OnEscapePressed += OnEscapePressed;
 
             _shop.OnButtonPressed += OnButtonPressed;
+            _shop.OnButtonPressed2 += OnButtonPressed2;
+            _shop.OnButtonPressed3 += OnButtonPressed3;
+            _shop.OnButtonPressed4 += OnButtonPressed4;
+            _shop.OnButtonPressed5 += OnButtonPressed5;
+            _shop.OnButtonPressed6 += OnButtonPressed6;
+            _shop.OnButtonPressed7 += OnButtonPressed7;
+            _shop.OnButtonPressed8 += OnButtonPressed8;
+            _shop.OnButtonPressed9 += OnButtonPressed9;
 
         }
 
