@@ -14,6 +14,7 @@ namespace Zombie
         private RenderWindow _window;
 
         public event Action OnResumePressed;
+        public event Action OnSavePressed;
 
         private Text _text;
         private Text _text2;
@@ -67,7 +68,7 @@ namespace Zombie
 
         private void SavePressed()
         {
-
+            OnSavePressed?.Invoke();
         }
     }
 }

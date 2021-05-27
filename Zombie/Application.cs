@@ -33,6 +33,7 @@ namespace Zombie
         private int i = 0;
         private int wait = 10;
         public int gold = 0;
+        private int X = 0;
 
         private bool boots = false;
         private bool life = false;
@@ -43,6 +44,12 @@ namespace Zombie
         private bool shield2 = false;
         private bool damage3 = false;
         private bool reach = false;
+
+        public List<string> _inventory;
+        public int balance = 0;
+
+        private dbUpdate _dbU;
+        private dbSync _dbS;
 
         public Application()
         {
@@ -77,8 +84,10 @@ namespace Zombie
             _shop.OnButtonPressed9 += OnButtonPressed9;
 
             _menu.OnResumePressed += OnResumePressed;
+            _menu.OnSavePressed += OnSavePressed;
 
             _game.GoldUp += GoldUp;
+            _game.Saving += Saving;
         }
 
         public void Run()
@@ -187,6 +196,22 @@ namespace Zombie
                 {
                     state = 2;
                     pressed = false;
+
+                    _dbS = new dbSync(Global._username, out int balance, out List<string> _inventory);
+                    gold = balance;
+                    string[] array = _inventory.ToArray();
+                    X = array.Length;
+                    for(int y=0; y<X; y++)
+                    {
+                        switch (array[y])
+                        {
+                            case "boots":
+                                wait = wait / 2;
+                                boots = true;
+                                _shop.Button1();
+                                break;
+                        }
+                    }
                 }
             }
         }
@@ -300,6 +325,25 @@ namespace Zombie
                 life2 = true;
                 _shop.Button9();
             }
+        }
+
+        private void OnSavePressed()
+        {
+            _game.Save();
+        }
+
+        private void Saving()
+        {
+            _inventory = new List<string>();
+            if(boots)
+            {
+                _inventory.Add("boots");
+            }
+            balance = gold;
+            _dbU = new dbUpdate(Global._username, balance, _inventory);
+            
+
+            _window.Close();
         }
 
         private void GoldUp()
