@@ -17,6 +17,7 @@ namespace Zombie
         public event Action OnEscapePressed;
         public event Action OnSpacePressed;
         public event Action GoldUp;
+        public event Action Saving;
 
         private bool roundOver = true;
         private int stop = 0;
@@ -107,6 +108,14 @@ namespace Zombie
         public void Escape()
         {
             stop = 0;
+        }
+
+        public void Save()
+        {
+            if(stop == 1)
+            {
+                Saving?.Invoke();
+            }
         }
 
         public void Draw()

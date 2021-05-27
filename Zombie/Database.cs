@@ -44,11 +44,11 @@ namespace Zombie
     public class Output
     {
         public int balance { get; set; }
-        public IList<string> inventory { get; set; }
+        public List<string> inventory { get; set; }
     }
     class dbSync
     {
-        public dbSync(string username, out int gold, out IList<string> inventory)
+        public dbSync(string username, out int balance, out List<string> _inventory)
         {
             Console.WriteLine(("").PadRight(24, '-'));
             Console.WriteLine(":::dbSync:::");
@@ -62,8 +62,8 @@ namespace Zombie
             var output = JsonConvert.DeserializeObject<Output>(reply);
             Console.WriteLine("JsonConvert.DeserializeObject: " + output);
 
-            gold = output.balance;
-            inventory = output.inventory;
+            balance = output.balance;
+            _inventory = output.inventory;
 
             Console.WriteLine("Balance: " + output.balance);
             Console.WriteLine("Inventory: " + output.inventory);
@@ -74,19 +74,19 @@ namespace Zombie
     public class Json
     {
         public int balance { get; set; }
-        public IList<string> inventory { get; set; }
+        public List<string> inventory { get; set; }
     }
     class dbUpdate
     {
-        public dbUpdate(string username, int gold, IList<string> inventory)
+        public dbUpdate(string username, int balance, List<string> _inventory)
         {
             Console.WriteLine(("").PadRight(24, '-'));
             Console.WriteLine(":::dbUpdate:::");
 
             Json json = new Json
             {
-                balance = gold,
-                inventory = inventory
+                balance = balance,
+                inventory = _inventory
             };
 
             string output = JsonConvert.SerializeObject(json);
