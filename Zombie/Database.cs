@@ -49,14 +49,14 @@ namespace Zombie
             Console.WriteLine(reply);
 
             var json = JsonConvert.DeserializeObject<dbSync>(reply);
-            Console.WriteLine(json.balance);
-            Console.WriteLine(json.inventory);
+            /*Console.WriteLine(json.balance);
+            Console.WriteLine(json.inventory);*/
         }
 
     }
     class dbUpdate
     {
-        public dbUpdate(string username, )
+        /*public dbUpdate(string username, )
         {
             info.balance = 100;
             info.inventory = new string[] { "boots" };
@@ -64,9 +64,9 @@ namespace Zombie
             string json = JsonConvert.SerializeObject(info);
 
             string URL = "http://htx-dev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php";
-            string data = "?user=" + username + "&data=" + json;
+            string data = "?user=" + username + "&data=" + json;*/
             /*e.g http://htx-dev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php?user=admin&data={balance:100,inventory2:[shoes]} */
-            string reply = new WebClient().DownloadString(URL + data);
+            /*string reply = new WebClient().DownloadString(URL + data);
             Console.WriteLine(reply);
             switch (reply)
             {
@@ -81,7 +81,7 @@ namespace Zombie
                         Console.WriteLine("Error when updating database");
                         break;
                     }
-            }
+            }*/
 
     }
 }

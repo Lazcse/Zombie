@@ -31,8 +31,10 @@ namespace Zombie
         private bool pause = false;
 
         private int i = 0;
+        private int wait = 20;
         public int gold = 0;
 
+        private bool boots = false;
         private bool life = false;
         private bool damage = false;
         private bool shield = false;
@@ -41,7 +43,6 @@ namespace Zombie
         private bool shield2 = false;
         private bool damage3 = false;
         private bool reach = false;
-        private bool life3 = false;
 
         public Application()
         {
@@ -104,7 +105,7 @@ namespace Zombie
                             {
                                 _game.Update();
                             }
-                            else if (i == 5)
+                            else if (i == wait)
                             {
                                 i = 0;
                             }
@@ -209,7 +210,8 @@ namespace Zombie
             if (gold >= 100 && !life && shop) 
             {
                 gold = gold - 100;
-                life = true;
+                boots = true;
+                wait = wait / 2;
                 _shop.Button1();
             }
         }
@@ -242,10 +244,10 @@ namespace Zombie
         }
         private void OnButtonPressed5()
         {
-            if (gold >= 500 && !life2 && shop)
+            if (gold >= 500 && !life && shop)
             {
                 gold = gold - 500;
-                life2 = true;
+                life = true;
                 _shop.Button5();
             }
         }
@@ -278,10 +280,10 @@ namespace Zombie
         }
         private void OnButtonPressed9()
         {
-            if (gold >= 900 && !life3 && shop)
+            if (gold >= 900 && !life2 && shop)
             {
                 gold = gold - 900;
-                life3 = true;
+                life2 = true;
                 _shop.Button9();
             }
         }

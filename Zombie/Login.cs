@@ -58,7 +58,8 @@ namespace Zombie
             _text1.Position = new Vector2f(250, 225);
             _text1.FillColor = new Color(128, 128, 128);
 
-            _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Password.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            //Font found on https://www.onlinewebfonts.com/download/51b459eae74df5b00ba922028ccb20be
         }
         private void Button()
         {
@@ -99,7 +100,7 @@ namespace Zombie
         }
         private void LogButtonPressed()
         {
-            OnLogButtonPressed?.Invoke();
+            OnLogButtonPressed?.Invoke(); 
         }
 
         private void LogButtonReleased()
@@ -116,6 +117,7 @@ namespace Zombie
                 _failed = true;
             }*/
             OnLogButtonReleased?.Invoke();
+            //_failed = true;
         }
     }
 }
