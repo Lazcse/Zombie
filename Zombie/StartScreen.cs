@@ -26,7 +26,7 @@ namespace Zombie
         public event Action OnStartButtonReleased;
 
 
-        public void startButton()
+        private void startButton()
         {
             _button = new Button(_window, new Vector2f(300 ,250 ), new Vector2f(200, 100));
             _button.OuterColor = Color.Transparent;

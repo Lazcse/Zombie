@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Zombie"
   ],
-  "SelectedNode": "\\Zombie.sln",
+  "SelectedNode": "\\Zombie\\Login.cs",
   "PreviewInSolutionExplorer": false
 }

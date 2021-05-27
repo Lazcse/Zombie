@@ -16,56 +16,232 @@ namespace Zombie
         public event Action OnEPressed;
         public event Action OnEscapePressed;
         public event Action OnSpacePressed;
-
-        private Text _text;
+        public event Action GoldUp;
 
         private bool roundOver = true;
+        private int stop = 0;
+
+        private bool up = false;
+        private bool down = false;
+        private bool left = false;
+        private bool right = false;
+
+        private RectangleShape _player;
+        private Vector2f _position = new Vector2f(0, 0);
+        private int _updateX = 0;
+        private int _updateY = 0;
+
+        private int i = 0;
+
         public Game(RenderWindow window)
         {
             _window = window;
+            Player();
+            _window.KeyPressed += OnKeyPressed;
+            _window.KeyReleased += OnKeyReleased;
+        }
+        private void Player()
+        {
+            _player = new RectangleShape(new Vector2f(50, 50));
+            _player.Position = _position;
+            _player.FillColor = new Color(0, 0, 255);
 
         }
-        public void TestG()
+        public void GoldUpdate()
         {
-            _text = new Text("Game", new Font("Arial.ttf"), 60);
-            _text.Position = new Vector2f(200, 200);
-            _text.FillColor = new Color(128, 128, 128);
+            if (!roundOver)
+            {
+                i++;
+                if(i == 100)
+                {
+                    i = 0;
+                    GoldUp?.Invoke();
+                }
+            }
+        }
+        public void Update()
+        {
+            _position = new Vector2f(_position.X + _updateX, _position.Y + _updateY);
 
+            if (_position.X > 800 - _player.Size.X)
+            {
+                _position.X = 800 - _player.Size.X;
+                _updateX = 0;
+                right = false;
+                left = false;
+            }
+            else if (_position.X < 0)
+            {
+                _position.X = 0;
+                _updateX = 0;
+                right = false;
+                left = false;
+            }
+
+            if (_position.Y > 600 - _player.Size.Y)
+            {
+                _position.Y = 600 - _player.Size.Y;
+                _updateY = 0;
+                up = false;
+                down = false;
+            }
+            else if (_position.Y < 0)
+            {
+                _position.Y = 0;
+                _updateY = 0;
+                up = false;
+                down = false;
+            }
+
+            _player.Position = _position;
         }
         public void Draw()
         {
-            _window.Draw(_text);
+            _window.Draw(_player);
         }
         private void OnKeyPressed(object sender, KeyEventArgs e)
         {
-            if (!roundOver) {
+           if (stop == 0)
+            {
                 if (e.Code == Keyboard.Key.W)
                 {
+                    if (!up)
+                    {
+                        _updateY += -1;
+                        up = true;
+                    }
                     
                 }
                 else if (e.Code == Keyboard.Key.S)
                 {
+                    if (!down)
+                    {
+                        _updateY += 1;
+                        down = true;
+                    }
                     
                 }
                 else if (e.Code == Keyboard.Key.A)
                 {
-                    
+                    if (!left)
+                    {
+                        _updateX += -1;
+                        left = true;
+                    }
                 }
                 else if (e.Code == Keyboard.Key.D)
                 {
-                    
+                    if (!right)
+                    {
+                        _updateX += 1;
+                        right = true;
+                    }
+                }else if (e.Code == Keyboard.Key.R)
+                {
+                    roundOver = !roundOver;
                 }
-            } else if (roundOver)
+            }
+            if (roundOver)
             {
                 if (e.Code == Keyboard.Key.E)
                 {
-                    OnEPressed?.Invoke();
+                    if (stop == 0)
+                    {
+                        stop = 2;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
+                        OnEPressed?.Invoke();
+                    } else if (stop == 2)
+                    {
+                        stop = 0;
+                        OnEPressed?.Invoke();
+                    }
                 }else if (e.Code == Keyboard.Key.Escape)
                 {
-                    OnEscapePressed?.Invoke();
-                }else if (e.Code == Keyboard.Key.Space)
+                    if (stop == 0)
+                    {
+                        stop = 1;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
+                        OnEscapePressed?.Invoke();
+                    }
+                    else if (stop == 1)
+                    {
+                        stop = 0;
+                        OnEscapePressed?.Invoke();
+                    }
+                    else if (stop == 2)
+                    {
+                        stop = 0;
+                        OnEPressed?.Invoke();
+                    }
+                }
+            } else if (!roundOver)
+            {
+                if (e.Code == Keyboard.Key.Space)
                 {
-                    OnSpacePressed?.Invoke();
+                    if (stop == 0)
+                    {
+                        stop = 3;
+                        _updateX = 0;
+                        _updateY = 0;
+                        up = false;
+                        down = false;
+                        left = false;
+                        right = false;
+                        OnSpacePressed?.Invoke();
+                    } else if (stop == 3)
+                    {
+                        stop = 0;
+                        OnSpacePressed?.Invoke();
+                    }
+                }
+            }
+        }
+        private void OnKeyReleased(object sender, KeyEventArgs e)
+        {
+            if (stop == 0)
+            {
+                if (e.Code == Keyboard.Key.W)
+                {
+                    if (up)
+                    {
+                        _updateY += 1;
+                        up = false;
+                    }
+                    
+                }
+                else if (e.Code == Keyboard.Key.S)
+                {
+                    if (down)
+                    {
+                        _updateY += -1;
+                        down = false;
+                    }
+                }
+                else if (e.Code == Keyboard.Key.A)
+                {
+                    if (left)
+                    {
+                        _updateX += 1;
+                        left = false;
+                    }
+                }
+                else if (e.Code == Keyboard.Key.D)
+                {
+                    if (right)
+                    {
+                        _updateX += -1;
+                        right = false;
+                    }
                 }
             }
         }

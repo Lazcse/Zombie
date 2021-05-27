@@ -42,7 +42,7 @@ namespace Zombie
 
         private bool _failed;
 
-        public void username()
+        private void username()
         {
             _text = new Text("Username", new Font("Arial.ttf"), 60);
             _text.Position = new Vector2f(250, 100);
@@ -52,7 +52,7 @@ namespace Zombie
 
         }
 
-        public void password()
+        private void password()
         {
             _text1 = new Text("Password", new Font("Arial.ttf"), 60);
             _text1.Position = new Vector2f(250, 225);
@@ -60,7 +60,7 @@ namespace Zombie
 
             _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
         }
-        public void Button()
+        private void Button()
         {
             _button = new Button(_window, new Vector2f(410, 355), new Vector2f(100, 25));
             _button.OuterColor = Color.Transparent;
@@ -72,7 +72,7 @@ namespace Zombie
             _text2.Position = new Vector2f(420, 355);
             _text2.FillColor = new Color(0, 0, 0);
         }
-        public void Failed()
+        private void Failed()
         {
             _text3 = new Text("Login failed", new Font("Arial.ttf"), 15);
             _text3.Position = new Vector2f(260, 360);
@@ -106,7 +106,7 @@ namespace Zombie
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
-            _db = new dbLogin(_username, _password,out bool loginState);
+            /*_db = new dbLogin(_username, _password,out bool loginState);
             if (loginState)
             {
                 OnLogButtonReleased?.Invoke();
@@ -114,10 +114,8 @@ namespace Zombie
             else
             {
                 _failed = true;
-            }
-            
+            }*/
+            OnLogButtonReleased?.Invoke();
         }
-
-        
     }
 }
