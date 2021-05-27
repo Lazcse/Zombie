@@ -26,7 +26,7 @@ namespace Zombie
         private bool left = false;
         private bool right = false;
 
-        private bool start = false;
+        private bool started = false;
 
         private RectangleShape _player;
         private Vector2f _position = new Vector2f(0, 0);
@@ -64,7 +64,7 @@ namespace Zombie
 
         public void Start()
         {
-            Start = true;
+            started = true;
         }
 
         public void Update()
