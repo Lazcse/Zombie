@@ -31,7 +31,7 @@ namespace Zombie
         private bool pause = false;
 
         private int i = 0;
-        private int wait = 20;
+        private int wait = 10;
         public int gold = 0;
 
         private bool boots = false;
@@ -114,17 +114,19 @@ namespace Zombie
                             if (shop)
                             {
                                 _shop.Draw();
-                            }else if (pause)
+                            }
+                            else if (pause)
                             {
                                 _pauseScreen.Draw();
-                            }else if (menu)
+                            }
+                            else if (menu)
                             {
                                 _menu.Draw();
                             }
                             break;
 
                         case 3:
-                            
+
                             break;
 
                         case 4:
@@ -134,7 +136,7 @@ namespace Zombie
                 }
                 _window.Display();
 
-            }   
+            }
         }
         private void OnWindowClosed(object sender, EventArgs e)
         {
@@ -167,11 +169,11 @@ namespace Zombie
         {
             if (state == 1)
             {
-                if (login == true) 
+                if (login == true)
                 {
                     pressed = true;
                 }
-                
+
             }
 
         }
@@ -189,7 +191,7 @@ namespace Zombie
         }
         private void OnEPressed()
         {
-            if(state == 2)
+            if (state == 2)
             {
                 shop = !shop;
             }
@@ -205,12 +207,12 @@ namespace Zombie
         {
             if (state == 2)
             {
-                    menu = !menu;   
+                menu = !menu;
             }
         }
         private void OnButtonPressed()
         {
-            if (gold >= 100 && !boots && shop) 
+            if (gold >= 100 && !boots && shop)
             {
                 gold = gold - 100;
                 boots = true;
@@ -220,7 +222,7 @@ namespace Zombie
         }
         private void OnButtonPressed2()
         {
-            if (gold >= 200  && !damage && shop)
+            if (gold >= 200 && !damage && shop)
             {
                 gold = gold - 200;
                 damage = true;
@@ -295,10 +297,6 @@ namespace Zombie
         {
             gold++;
         }
-
-        Application info = new Application();
-
-        info.balance = 100;
-        info.inventory = new string[] { "boots" };
+    }
 }
 
