@@ -210,7 +210,7 @@ namespace Zombie
         }
         private void OnButtonPressed()
         {
-            if (gold >= 100 && !life && shop) 
+            if (gold >= 100 && !boots && shop) 
             {
                 gold = gold - 100;
                 boots = true;
