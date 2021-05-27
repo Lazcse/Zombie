@@ -13,7 +13,7 @@ namespace Zombie
     {
         private RenderWindow _window;
 
-        public event Action OnEscapePressed;
+        public event Action OnResumePressed;
 
         private Text _text;
         private Text _text2;
@@ -62,7 +62,7 @@ namespace Zombie
 
         private void ResumePressed()
         {
-            OnEscapePressed?.Invoke();
+            OnResumePressed?.Invoke();
         }
 
         private void SavePressed()

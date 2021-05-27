@@ -76,7 +76,7 @@ namespace Zombie
             _shop.OnButtonPressed8 += OnButtonPressed8;
             _shop.OnButtonPressed9 += OnButtonPressed9;
 
-            _menu.OnEscapePressed += OnEscapePressed;
+            _menu.OnResumePressed += OnResumePressed;
 
             _game.GoldUp += GoldUp;
         }
@@ -105,11 +105,12 @@ namespace Zombie
                             {
                                 _game.Update();
                             }
-                            else if (i == wait)
+                            else if (i >= wait)
                             {
                                 i = 0;
                             }
                             _game.GoldUpdate();
+                            _game.Start();
                             _game.Draw();
                             if (shop)
                             {
@@ -208,6 +209,14 @@ namespace Zombie
             if (state == 2)
             {
                 menu = !menu;
+            }
+        }
+        private void OnResumePressed()
+        {
+            if (state == 2 && menu)
+            {
+                menu = !menu;
+                _game.Escape();
             }
         }
         private void OnButtonPressed()
