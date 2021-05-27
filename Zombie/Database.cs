@@ -16,7 +16,7 @@ namespace Zombie
             loginState = false;
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_login.php";
             string data = "?user=" + username + "&pass=" + password;
-            /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php?user=admin&pass=password */
+            
             string reply = new WebClient().DownloadString(URL + data);
             switch (reply)
             {
@@ -55,7 +55,7 @@ namespace Zombie
 
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_sync.php";
             string data = "?user=" + username;
-            /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_sync.php?user=admin */
+            
             string reply = new WebClient().DownloadString(URL + data);
             Console.WriteLine("reply: " + reply);
 
@@ -94,7 +94,7 @@ namespace Zombie
 
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php";
             string data = "?user=" + username + "&data=" + output;
-            /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php?user=admin&data={"balance": 50, "inventory": ["shoes"]} */
+            
             string reply = new WebClient().DownloadString(URL + data);
             Console.WriteLine(reply);
             Console.WriteLine();
