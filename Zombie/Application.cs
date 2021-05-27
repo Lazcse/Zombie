@@ -296,9 +296,9 @@ namespace Zombie
             gold++;
         }
 
-        Application info = new Application();
+        /*Application info = new Application();
 
         info.balance = 100;
-        info.inventory = new string[] { "boots" };
+        info.inventory = new string[] { "boots" };*/
 }
 
