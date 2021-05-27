@@ -9,7 +9,6 @@ using System.Xml;
 
 namespace Zombie
 {
-    //test
     class Application
     {
         private readonly RenderWindow _window;
