@@ -146,7 +146,6 @@ C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\runtimes\win-x
 C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\csfml-System.dll
 C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\csfml-Window.dll
 C:\Users\magnu\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\openal32.dll
-C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csprojAssemblyReference.cache
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfoInputs.cache
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.AssemblyInfo.cs
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.CopyComplete
@@ -237,3 +236,4 @@ C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.pdb
 C:\Users\lasse\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.genruntimeconfig.cache
 C:\Users\magnu\Source\Repos\Zombie\Zombie\obj\Debug\netcoreapp3.1\Zombie.csproj.AssemblyReference.cache
 C:\Users\lasse\Source\Repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Password.ttf
+C:\Users\magnu\source\repos\Zombie\Zombie\bin\Debug\netcoreapp3.1\Password.ttf
