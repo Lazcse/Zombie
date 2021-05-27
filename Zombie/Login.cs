@@ -124,7 +124,7 @@ namespace Zombie
                 OnLogButtonReleased?.Invoke();
 
                 /*dbSync*/
-                _dbS = new dbSync(_username, out int gold, out IList<string> inventory);
+                _dbS = new dbSync(_username, out int gold, out List<string> inventory);
                 Console.WriteLine(("").PadRight(24, '-'));
                 Console.WriteLine(":::Login.cs:::");
                 Console.WriteLine("Balance: " + gold);
