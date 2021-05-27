@@ -216,6 +216,7 @@ namespace Zombie
             if (state == 2 && menu)
             {
                 menu = !menu;
+                _game.Escape();
             }
         }
         private void OnButtonPressed()

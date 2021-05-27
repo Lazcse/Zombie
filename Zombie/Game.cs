@@ -103,6 +103,12 @@ namespace Zombie
 
             _player.Position = _position;
         }
+
+        public void Escape()
+        {
+            stop = 0;
+        }
+
         public void Draw()
         {
             _window.Draw(_player);
