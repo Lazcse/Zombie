@@ -107,7 +107,7 @@ namespace Zombie
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
-            /*_db = new dbLogin(_username, _password,out bool loginState);
+            _db = new dbLogin(_username, _password, out bool loginState);
             if (loginState)
             {
                 OnLogButtonReleased?.Invoke();
@@ -115,9 +115,7 @@ namespace Zombie
             else
             {
                 _failed = true;
-            }*/
-            OnLogButtonReleased?.Invoke();
-            //_failed = true;
+            }
         }
     }
 }

@@ -167,8 +167,11 @@ namespace Zombie
         {
             if (state == 1)
             {
+                if (login == true) 
+                {
+                    pressed = true;
+                }
                 
-                pressed = true;
             }
 
         }
