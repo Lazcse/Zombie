@@ -117,7 +117,5 @@ namespace Zombie
             }*/
             OnLogButtonReleased?.Invoke();
         }
-
-        
     }
 }
