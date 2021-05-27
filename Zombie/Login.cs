@@ -40,6 +40,17 @@ namespace Zombie
 
         private dbLogin _db;
 
+        /*dbSync*/
+        private dbSync _dbS;
+
+        /**/
+
+        /*dbUpdate*/
+        private dbUpdate _dbU;
+        public int gold;
+        public IList<string> inventory; 
+        /**/
+
         private bool _failed;
 
         private void username()
@@ -111,6 +122,25 @@ namespace Zombie
             if (loginState)
             {
                 OnLogButtonReleased?.Invoke();
+
+                /*dbSync*/
+                _dbS = new dbSync(_username, out int gold, out IList<string> inventory);
+                Console.WriteLine(("").PadRight(24, '-'));
+                Console.WriteLine(":::Login.cs:::");
+                Console.WriteLine("Balance: " + gold);
+                Console.WriteLine("Inventory: " + inventory);
+                Console.WriteLine();
+                /**/
+
+                /*dbUpdate*/
+                gold = 100;
+                inventory = new List<string>
+                {
+                    "boots",
+                    "hat"
+                };
+                _dbU = new dbUpdate(_username, gold, inventory);
+                /**/
             }
             else
             {

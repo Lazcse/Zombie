@@ -10,13 +10,14 @@ namespace Zombie
     {
         public dbLogin(string username, string password, out bool loginState)
         {
+            Console.WriteLine(("").PadRight(24, '-'));
+            Console.WriteLine(":::dbLogin:::");
+
             loginState = false;
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_login.php";
             string data = "?user=" + username + "&pass=" + password;
             /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php?user=admin&pass=password */
             string reply = new WebClient().DownloadString(URL + data);
-            Console.WriteLine(reply);
-            Console.WriteLine(password);
             switch (reply)
             {
                 case "success":
@@ -36,62 +37,67 @@ namespace Zombie
                         break;
                     }
             }
+            Console.WriteLine();
         }
 
     }
+    public class Output
+    {
+        public int balance { get; set; }
+        public IList<string> inventory { get; set; }
+    }
     class dbSync
     {
-        public dbSync(string username)
+        public dbSync(string username, out int gold, out IList<string> inventory)
         {
+            Console.WriteLine(("").PadRight(24, '-'));
+            Console.WriteLine(":::dbSync:::");
+
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_sync.php";
             string data = "?user=" + username;
             /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_sync.php?user=admin */
             string reply = new WebClient().DownloadString(URL + data);
-            Console.WriteLine(reply);
+            Console.WriteLine("reply: " + reply);
 
-            var json = JsonConvert.DeserializeObject<dbSync>(reply);
-            /*Console.WriteLine(json.balance);
-            Console.WriteLine(json.inventory);*/
+            var output = JsonConvert.DeserializeObject<Output>(reply);
+            Console.WriteLine("JsonConvert.DeserializeObject: " + output);
 
+            gold = output.balance;
+            inventory = output.inventory;
+
+            Console.WriteLine("Balance: " + output.balance);
+            Console.WriteLine("Inventory: " + output.inventory);
+
+            Console.WriteLine();
         }
-
     }
-    class Info
+    public class Json
     {
-        public Info() { }
-
-        int balance { get; set; }
-        string inventory { get; set; }
+        public int balance { get; set; }
+        public IList<string> inventory { get; set; }
     }
     class dbUpdate
     {
-        public dbUpdate(string username, int balance, string inventory)
+        public dbUpdate(string username, int gold, IList<string> inventory)
         {
-            Info info = new Info();
+            Console.WriteLine(("").PadRight(24, '-'));
+            Console.WriteLine(":::dbUpdate:::");
 
-            /*info.balance = balance;
-            info.inventory = inventory;*/
+            Json json = new Json
+            {
+                balance = gold,
+                inventory = inventory
+            };
 
-            string json = JsonConvert.SerializeObject(info);
+            string output = JsonConvert.SerializeObject(json);
+            Console.WriteLine("JsonConvert.SerializeObject: " + output);
 
             string URL = "http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php";
-            string data = "?user=" + username + "&data=" + json;
+            string data = "?user=" + username + "&data=" + output;
             /*e.g http://htx-elev.ucholstebro.dk/HX-20-pr-B/magn5405/zombie/_update.php?user=admin&data={"balance": 50, "inventory": ["shoes"]} */
             string reply = new WebClient().DownloadString(URL + data);
             Console.WriteLine(reply);
-            switch (reply)
-            {
-                case "success":
-                    {
-                        Console.WriteLine("Database successfully updated");
-                        break;
-                    }
-                case "error":
-                    {
-                        Console.WriteLine("Error when updating database");
-                        break;
-                    }
-            }
+            Console.WriteLine();
         }
     }
 }
