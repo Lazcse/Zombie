@@ -102,7 +102,7 @@ namespace Zombie
 
         private void Texts()
         {
-            _text = new Text("Life", new Font("Arial.ttf"), 20);
+            _text = new Text("Boots", new Font("Arial.ttf"), 20);
             _text.Position = new Vector2f(180, 90);
             _text.FillColor = new Color(0, 0, 0);
 

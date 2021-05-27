@@ -38,9 +38,7 @@ namespace Zombie
         public event Action OnLogButtonPressed;
         public event Action OnLogButtonReleased;
 
-        private dbLogin _dbl;
-        private dbSync _dbs;
-        private dbUpdate _dbu;
+        private dbLogin _db;
 
         private bool _failed;
 
@@ -60,7 +58,8 @@ namespace Zombie
             _text1.Position = new Vector2f(250, 225);
             _text1.FillColor = new Color(128, 128, 128);
 
-            _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Arial.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            _textInput1 = new TextInput(_window, new Vector2f(260, 300), 250f, 50f, new Font("Password.ttf")) { FieldColor = Color.White, TextColor = Color.Black };
+            //Font found on https://www.onlinewebfonts.com/download/51b459eae74df5b00ba922028ccb20be
         }
         private void Button()
         {
@@ -101,16 +100,14 @@ namespace Zombie
         }
         private void LogButtonPressed()
         {
-            OnLogButtonPressed?.Invoke();
+            OnLogButtonPressed?.Invoke(); 
         }
 
         private void LogButtonReleased()
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
-            _dbl = new dbLogin(_username, _password,out bool loginState);
-            _dbs = new dbSync(_username);
-            _dbu = new dbUpdate(_username, 100, "boots");
+            _db = new dbLogin(_username, _password, out bool loginState);
             if (loginState)
             {
                 OnLogButtonReleased?.Invoke();
