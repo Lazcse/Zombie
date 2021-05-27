@@ -38,7 +38,9 @@ namespace Zombie
         public event Action OnLogButtonPressed;
         public event Action OnLogButtonReleased;
 
-        private dbLogin _db;
+        private dbLogin _dbl;
+        private dbSync _dbs;
+        private dbUpdate _dbu;
 
         private bool _failed;
 
@@ -106,7 +108,9 @@ namespace Zombie
         {
             _username = _textInput.Text;
             _password = _textInput1.Text;
-            /*_db = new dbLogin(_username, _password,out bool loginState);
+            _dbl = new dbLogin(_username, _password,out bool loginState);
+            _dbs = new dbSync(_username);
+            _dbu = new dbUpdate(_username, 100, "boots");
             if (loginState)
             {
                 OnLogButtonReleased?.Invoke();
@@ -114,8 +118,7 @@ namespace Zombie
             else
             {
                 _failed = true;
-            }*/
-            OnLogButtonReleased?.Invoke();
+            }
         }
     }
 }

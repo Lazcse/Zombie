@@ -290,5 +290,10 @@ namespace Zombie
         {
             gold++;
         }
-    }
+
+        Application info = new Application();
+
+        info.balance = 100;
+        info.inventory = new string[] { "boots" };
 }
+
